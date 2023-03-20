@@ -1,0 +1,24 @@
+{
+  "name": "inventory-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "build": "cd server && npm i && npm run build && cd ../client && npm i && npm run build",
+    "start": "cd ./server/public && node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kristina-sparrow/inventory-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kristina-sparrow/inventory-app/issues"
+  },
+  "homepage": "https://github.com/kristina-sparrow/inventory-app#readme"
+}

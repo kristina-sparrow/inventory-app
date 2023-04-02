@@ -8,9 +8,11 @@ export default function App() {
   return (
     <>
       <Sidebar />
-      <Header />
-      <Main />
-      <Footer />
+      <div className="content">
+        <Header />
+        <Main />
+        <Footer />
+      </div>
     </>
   );
 }

@@ -2,9 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 
 $clr-dark: #2f283b;
-$clr-lightBG: #f7f8f9;
 $clr-light: #ffffff;
-$clr-grayL: rgb(245, 243, 243);
+$clr-grayL: rgb(241, 244, 247);
+$clr-grayM: rgb(226, 220, 220);
 $clr-grayD: hsla(0, 0%, 37%, 1);
 $clr-green: hsla(194, 50%, 33%, 1);
 $clr-blue: rgb(36, 120, 165);
@@ -76,11 +76,77 @@ li {
 .header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 20px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.075);
   .header__title {
     font-size: 1.6rem;
   }
+  .header__tools {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    .divider {
+      background-color: $clr-grayM;
+      height: 35px;
+      width: 1px;
+    }
+    .alerts {
+      font-size: 1.4rem;
+      color: $clr-dark;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .header__user {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      font-size: 1.1rem;
+      .avatar {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        border: 1px solid $clr-dark;
+      }
+    }
+  }
+}
+
+/* SEARCH BAR */
+::placeholder {
+  color: inherit;
+  font-size: inherit;
+  opacity: 0;
+}
+
+input,
+input:focus,
+input:focus:not(:placeholder-shown) {
+  background-color: $clr-grayL;
+  border-radius: 30px;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  padding: 10px 20px;
+  transition: width 0.3s;
+  width: 250px;
+}
+
+input:not(:focus):placeholder-shown {
+  background-image: url(./assets/search.svg);
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  border-radius: 30px;
+  height: 40px;
+  width: 40px;
 }
 
 /* CONTENT */
@@ -95,7 +161,7 @@ li {
 
 /* SIDEBAR */
 .sidebar {
-  background-color: $clr-lightBG;
+  background-color: $clr-grayL;
   width: 300px;
   min-height: 100vh;
   padding: 20px 30px;

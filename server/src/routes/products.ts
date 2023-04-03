@@ -1,11 +1,17 @@
 import { Router, Request } from "express";
 import multer, { Multer, diskStorage, StorageEngine } from "multer";
 import itemController from "../controllers/itemController";
+import {
+  createCategory,
+  updateCategory,
+  deleteCategory,
+} from "../controllers/categoryController";
+
 const router = Router();
 
 const storage: StorageEngine = diskStorage({
   destination: function (req: Request, file: Express.Multer.File, cb: any) {
-    cb(null, `${__dirname}/../public/images`);
+    cb(null, `${__dirname}/../public/assets`);
   },
   filename: function (req: Request, file: Express.Multer.File, cb: any) {
     cb(null, `${Date.now()}.${file.originalname.split(".")[1]}`); // Appending extension
@@ -30,5 +36,9 @@ router.post(
   upload.single("image"),
   itemController.postItemEdit
 );
+
+router.post("/", createCategory);
+router.get("/category/delete/:id", deleteCategory);
+router.post("/:id", updateCategory);
 
 export default router;

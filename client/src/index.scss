@@ -162,7 +162,7 @@ input:not(:focus):placeholder-shown {
 /* SIDEBAR */
 .sidebar {
   background-color: $clr-grayL;
-  width: 300px;
+  width: 275px;
   min-height: 100vh;
   padding: 20px 30px;
   .sidebar__logo {
@@ -198,6 +198,33 @@ input:not(:focus):placeholder-shown {
 .main {
   flex: 1;
   padding: 20px;
+}
+/* PRODUCT GRID */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* PRODUCT CARD */
+.product-card {
+  max-width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 10px;
+  &:hover {
+    background-color: $clr-grayL;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .card__img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* FOOTER */

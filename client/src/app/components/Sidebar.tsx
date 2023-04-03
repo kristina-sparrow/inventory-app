@@ -14,7 +14,7 @@ export default function Sidebar() {
             <Link to={routes.HOME}>Home</Link>
           </li>
           <li className="sidebar__nav-link">
-            <Link to={routes.PRODUCTS}>Products</Link>
+            <Link to={routes.PRODUCT_LIST}>All Products</Link>
           </li>
           <li className="sidebar__nav-link">
             <Link to={routes.CATEGORIES}>Categories</Link>
@@ -23,7 +23,7 @@ export default function Sidebar() {
             <Link to={routes.BRANDS}>Brands</Link>
           </li>
           <li className="sidebar__nav-link">
-            <Link to={routes.LOCATIONS}>Locations</Link>
+            <Link to={routes.LOCATIONS}>Store Locations</Link>
           </li>
         </ul>
       </nav>

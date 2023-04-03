@@ -6,6 +6,11 @@ import {
   updateCategory,
   deleteCategory,
 } from "../controllers/categoryController";
+import {
+  createBrand,
+  updateBrand,
+  deleteBrand,
+} from "../controllers/brandController";
 
 const router = Router();
 
@@ -40,5 +45,9 @@ router.post(
 router.post("/", createCategory);
 router.get("/category/delete/:id", deleteCategory);
 router.post("/:id", updateCategory);
+
+router.post("/", createBrand);
+router.get("/brand/delete/:id", deleteBrand);
+router.post("/:id", updateBrand);
 
 export default router;

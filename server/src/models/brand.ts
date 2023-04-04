@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 
 const BrandSchema = new Schema({
-  name: { type: String, minLength: 1 },
+  name: { type: String, required: true, unique: true },
 });
 
 BrandSchema.virtual("url").get(function () {

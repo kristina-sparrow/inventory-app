@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 
 const CategorySchema = new Schema({
-  name: { type: String, minLength: 1 },
+  name: { type: String, required: true, unique: true },
 });
 
 CategorySchema.virtual("url").get(function () {
